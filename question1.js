@@ -1,6 +1,6 @@
 var question1 =
     {
-        prompt: `Whose name ends with Blidge?
+        prompt: `Whose name ends with Blige?
         (a) Erykah.J
         (b) Mary.J
         (c) Jill.J
@@ -10,5 +10,5 @@ var question1 =
 
 var rightAnswer = (document.body.style.backgroundColor = "green");
 var wrongAnswer = (document.body.style.backgroundColor = "red");
-export default question1;
+
 
