@@ -5,4 +5,15 @@
     color: rgb(5, 187, 20);}
 .p {height: 90px;
     text-align:center; }
-.button {align-self: center;}
+
+.center-container {
+    display: flex;
+    justify-content: center;
+}
+
+.big-container {
+height: 75vh;
+display: flex;
+flex-direction: column;
+justify-content: center;
+}
