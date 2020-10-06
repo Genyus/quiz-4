@@ -1,7 +1,7 @@
 document.body.style.backgroundColor = "white";
 
 const targetButton = document.getElementById("button"); 
-const targetQuestion1 = document.getElementById("question1")
+const targetMarks = document.getElementById("marks.html")
 targetButton.addEventListener("click", clickButton);
 // the Dom research this ASAP & funtions (the way they work)
 
@@ -12,12 +12,10 @@ function clickButton() {
 
 // this is the JSON research more please Emma!!
 var question1 = {
-        prompt: "Whose name ends with Blige?",
+        prompt: "Your Score!",
             answers:  
-                ["(a) Erykah.J",
-                "(b) Mary.J",
-                "(c) Jill.J",
-                "(d) Mona.J"],
+                ["PASS",
+                "FAIL"],
             answer: 1,
     }
 // THE DOM!

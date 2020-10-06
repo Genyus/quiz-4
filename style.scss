@@ -1,19 +1,26 @@
-.content { max-width: 500px;
-    margin: auto;}
+// $h2TextColor : white;
 
 .h1 {text-align:center; 
     color: rgb(5, 187, 20);}
+
+.h2 {text-align:center; 
+    color: rgb(5, 187, 20);}
+
 .p {height: 90px;
     text-align:center; }
 
 .center-container {
-    display: flex;
-    justify-content: center;
+    display: center;
+    justify-content: center
 }
 
 .big-container {
 height: 75vh;
 display: flex;
-flex-direction: column;
 justify-content: center;
+}
+
+
+.button {display: flex;
+    justify-content: center;
 }
