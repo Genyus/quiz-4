@@ -22,25 +22,49 @@ var question1 = {
 document.getElementById("theQuestion").innerText=question1.prompt; 
 
 // THE FOR LOOP CHILLLE!
-for (i =0; i < question1.answers.length; i++) {
-    var button=document.createElement("button"); //THE DOM HERE YOU SEE IT <--
-    button.innerHTML =question1.answers[i];
-    if (i === question1.answer) 
-    {
-    button.addEventListener("click", rightAnswer);
-} else {button.addEventListener("click", wrongAnswer);
-}
-    
-    document.getElementById("theOptions").appendChild(button);
 
-}
+const resultsContainer = document.getElementById('results');
+const submitButton = document.getElementById('submit');
 
-function rightAnswer () {
-    document.body.style.backgroundColor = "green"; 
-    location.href = "question2.html";
-}
-function wrongAnswer () {
-    document.body.style.backgroundColor = "red"; 
-    location.href = "question2.html";
-}
+submitButton.addEventListener('click', showResults);
 
+function showResults(){
+
+    // gather answer containers from our quiz
+    const answerContainers = quizContainer.querySelectorAll('.answers');
+  
+    // keep track of user's answers
+    let numCorrect = 0;
+  
+    // for each question...
+    myQuestions.forEach( (currentQuestion, questionNumber) => {
+  
+      // find selected answer
+      const answerContainer = answerContainers[questionNumber];
+      const selector = `input[name=question${questionNumber}]:checked`;
+      const userAnswer = (answerContainer.querySelector(selector) || {}).value;
+  
+      // if answer is correct
+      if(userAnswer === currentQuestion.correctAnswer){
+        // add to the number of correct answers
+        numCorrect++;
+  
+        // color the answers green
+        answerContainers[questionNumber].style.color = 'lightgreen';
+      }
+      // if answer is wrong or blank
+      else{
+        // color the answers red
+        answerContainers[questionNumber].style.color = 'red';
+      }
+    });
+  
+    // show number of correct answers out of total
+    resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`;
+  }
+
+  // gather answer containers from our quiz
+const answerContainers = quizContainer.querySelectorAll('.answers');
+
+// keep track of user's answers
+let numCorrect = 0;

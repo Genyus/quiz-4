@@ -15,7 +15,7 @@ function clickButton() {
 // this is the JSON research more please Emma!!
 
 var question4 = {
-    prompt: "What Musical Artist became known as a symbol?",
+    prompt: "Who was Mary Seacle?",
     answers:  
         ["(a) Singer",
         "(b) Army General",

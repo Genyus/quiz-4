@@ -24,7 +24,7 @@ function clickButton() {
 
 // this is the JSON research more please Emma!!
 var question2 = {
-        prompt: "What Musical Artist became known as a symbol?",
+        prompt: "What musical Artist became known as a Symbol?",
             answers:  
                     ["(a) Elton John",
                     "(b) DMX",
