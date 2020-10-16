@@ -51,9 +51,13 @@ for (i =0; i < question2.answers.length; i++) {
 
 function rightAnswer () {
     document.body.style.backgroundColor = "green"; 
+    let score = parseInt(getCookie("quiz"))
+    setCookie("quiz", (++score).toString(), 7)
     location.href = "question3.html";
+    score.answer = "marks.html";
 }
 function wrongAnswer () {
     document.body.style.backgroundColor = "red"; 
     location.href = "question3.html";
+    score.answer = "marks.html";
 }

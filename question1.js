@@ -39,6 +39,7 @@ for (i =0; i < question1.answers.length; i++) {
 
 function rightAnswer () {
     document.body.style.backgroundColor = "green"; 
+    setCookie("quiz", "1", 7)
     location.href = "question2.html";
 }
 function wrongAnswer () {

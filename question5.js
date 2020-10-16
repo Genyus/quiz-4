@@ -50,6 +50,8 @@ for (i =0; i < question5.answers.length; i++) {
 
 function rightAnswer () {
     document.body.style.backgroundColor = "green"; 
+    let score = parseInt(getCookie("quiz"))
+    setCookie("quiz", (++score).toString(), 7)
     location.href = "marks.html";
 }
 function wrongAnswer () {

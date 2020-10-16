@@ -41,6 +41,8 @@ document.getElementById("theOptions").appendChild(button);
 
 function rightAnswer () {
     document.body.style.backgroundColor = "green"; 
+    let score = parseInt(getCookie("quiz"))
+    setCookie("quiz", (++score).toString(), 7)
     location.href = "question5.html";
 }
 function wrongAnswer () {
